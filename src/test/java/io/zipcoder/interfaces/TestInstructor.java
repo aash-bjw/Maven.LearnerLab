@@ -56,7 +56,7 @@ public class TestInstructor {
         instructor.teach(student, 5);
 
 //        double expected = 5;
-//        double actual = 
+//        double actual =
     }
 
     }
