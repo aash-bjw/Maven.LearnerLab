@@ -49,14 +49,29 @@ public class TestInstructor {
 
     @Test
     public void testLecture(){
+    //given
+        double numOfHours = 3;
+
         Instructor instructor = new Instructor(123, "Kris");
 
-        Student student = new Student(456, "Zaara", 0);
+        Learner[] learners = new Learner[3];
 
-        instructor.teach(student, 5);
+        Student student1 = new Student(456, "Zaara", 0);
+        Student student2 = new Student(123, "Veer", 0);
+        Student student3 = new Student(798, "Samiya", 0);
 
-//        double expected = 5;
-//        double actual =
+        learners[0] = student1;
+        learners[1] = student2;
+        learners[2] = student3;
+
+    //when
+        instructor.lecture(learners, numOfHours);
+
+    //then
+       double student1StudyTime = student1.getTotalStudyTime();
+       double expectedStudyTime = 1;
+
+       Assert.assertEquals(expectedStudyTime, student1StudyTime, .4);
     }
 
     }
